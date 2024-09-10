@@ -16,11 +16,11 @@ The code mentioned in this document are used in the Certified Kubernetes Securit
 
 
 
-   [PlDa]: <https://github.com/zealvora/certified-kubernetes-security-specialist/blob/master/domain-6-monitor-log-runtimesec/install-falco.md>
-   [PlDb]: <https://github.com/zealvora/certified-kubernetes-security-specialist/blob/master/domain-6-monitor-log-runtimesec/sysdig.md>
-   [PlDc]: <https://github.com/zealvora/certified-kubernetes-security-specialist/blob/master/domain-6-monitor-log-runtimesec/custom-falco-rules.md>
-   [PlDd]: <https://github.com/zealvora/certified-kubernetes-security-specialist/blob/master/domain-6-monitor-log-runtimesec/falco-exam-perspective.md>
+   [PlDa]: <https://github.com/ameeno/certified-kubernetes-security-specialist/blob/master/domain-6-monitor-log-runtimesec/install-falco.md>
+   [PlDb]: <https://github.com/ameeno/certified-kubernetes-security-specialist/blob/master/domain-6-monitor-log-runtimesec/sysdig.md>
+   [PlDc]: <https://github.com/ameeno/certified-kubernetes-security-specialist/blob/master/domain-6-monitor-log-runtimesec/custom-falco-rules.md>
+   [PlDd]: <https://github.com/ameeno/certified-kubernetes-security-specialist/blob/master/domain-6-monitor-log-runtimesec/falco-exam-perspective.md>
 
-   [PlDe]: <https://github.com/zealvora/certified-kubernetes-security-specialist/blob/master/domain-6-monitor-log-runtimesec/audit-log-detailed.md>
+   [PlDe]: <https://github.com/ameeno/certified-kubernetes-security-specialist/blob/master/domain-6-monitor-log-runtimesec/audit-log-detailed.md>
 
-   [PlDf]: <https://github.com/zealvora/certified-kubernetes-security-specialist/blob/master/domain-6-monitor-log-runtimesec/immutability.md>
+   [PlDf]: <https://github.com/ameeno/certified-kubernetes-security-specialist/blob/master/domain-6-monitor-log-runtimesec/immutability.md>
