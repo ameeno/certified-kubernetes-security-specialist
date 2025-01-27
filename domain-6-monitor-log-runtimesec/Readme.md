@@ -21,8 +21,8 @@ The code mentioned in this document are used in the Certified Kubernetes Securit
    [PlDa]: <./install-falco.md>
    [PlDb]: <./falco-practical.md>
    [PlDc]: <./writing-falco-rules.md>
-   [PlDd]: <./falco-mem-rule.md>   
-   [PlDe]: <./falco-config-file.md>   
+   [PlDd]: <./falco-mem-rule.md>
+   [PlDe]: <./falco-config-file.md>
    [PlDf]: <./sysdig.md>
    [PlDg]: <./audit-log-detailed.md>
 

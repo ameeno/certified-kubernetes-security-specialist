@@ -14,7 +14,7 @@ kubectl describe service example-service
 ```
 ### Step 2 - Configure Nginx Ingress Controller
 ```sh
-kubectl create -f https://raw.githubusercontent.com/zealvora/certified-kubernetes-security-specialist/refs/heads/main/domain-1-cluster-setup/nginx-controller.yaml
+kubectl create -f https://raw.githubusercontent.com/ameeno/certified-kubernetes-security-specialist/refs/heads/main/domain-1-cluster-setup/nginx-controller.yaml
 
 kubectl get pods -n ingress-nginx
 
@@ -32,7 +32,7 @@ openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout ingress.key -out ing
 ### Step 4 - Verify the Default TLS Certificate
 Use the NodePort associated with TLS
 ```sh
-curl -kv <IP>:NodePort 
+curl -kv <IP>:NodePort
 ```
 ### Step 5 - Create Kubernetes TLS based secret :
 ```sh
@@ -52,8 +52,8 @@ Add the `/etc/hosts` entry for mapping before running this command
 curl -kv https://example.internal:31893
 ```
 
-## Don't delete the resources created for this practical. We will need it in the next video. 
-### Step 8 - Delete All Resources 
+## Don't delete the resources created for this practical. We will need it in the next video.
+### Step 8 - Delete All Resources
 
 ALERT: Don't delete the resources created in this practical. It will be used in the next video.
 ```sh
@@ -62,5 +62,5 @@ kubectl delete service example-service
 kubectl delete ingress demo-ingress
 kubectl delete secret tls-certificate
 
-kubectl delete -f https://raw.githubusercontent.com/zealvora/certified-kubernetes-security-specialist/refs/heads/main/domain-1-cluster-setup/nginx-controller.yaml
+kubectl delete -f https://raw.githubusercontent.com/ameeno/certified-kubernetes-security-specialist/refs/heads/main/domain-1-cluster-setup/nginx-controller.yaml
 ```
