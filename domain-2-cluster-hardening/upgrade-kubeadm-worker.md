@@ -4,9 +4,9 @@ https://kubernetes.io/docs/tasks/administer-cluster/kubeadm/kubeadm-upgrade/
 
 #### Configure Repository for newer Kubernetes version
 ```sh
-curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.32/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
+curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.33/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
 
-echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.32/deb/ /' | sudo tee /etc/apt/sources.list.d/kubernetes.list
+echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.33/deb/ /' | sudo tee /etc/apt/sources.list.d/kubernetes.list
 
 apt-get update
 ```
@@ -21,7 +21,7 @@ apt-mark unhold kubeadm kubelet kubectl
 
 #### Install and Upgrade Kubeadm
 ```sh
-apt-get install -y kubeadm="1.32.2-1.1*"
+apt-get install -y kubeadm="1.33.5-1.1*"
 
 kubeadm upgrade node
 ```
@@ -35,11 +35,12 @@ apt-cache madison kubectl
 ```
 RUN the below command CONTROL PLANE NODE. Replace `node01` with appropriate worker node name
 ```sh
-kubectl drain node01 --ignore-daemonsets
+kubectl drain kube-worker0 --ignore-daemonsets
+kubectl drain kube-worker1 --ignore-daemonsets
 ```
-Following commands will run on worker node 
+Following commands will run on worker node
 ```sh
-apt-get install -y kubelet="1.32.2-1.1*" kubectl="1.32.2-1.1"
+apt-get install -y kubelet="1.33.5-1.1*" kubectl="1.33.5-1.1"
 
 sudo systemctl daemon-reload
 
@@ -50,6 +51,6 @@ sudo systemctl restart kubelet
 
 RUN the below command CONTROL PLANE NODE. Replace `node01` with appropriate worker node name
 ```sh
-kubectl uncordon node01 
+kubectl uncordon node01
 kubectl get nodes
 ```

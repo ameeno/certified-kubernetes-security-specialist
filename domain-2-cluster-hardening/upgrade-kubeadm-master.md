@@ -13,9 +13,9 @@ apt-mark unhold kubeadm kubelet kubectl
 
 #### Configure Repository for newer Kubernetes version
 ```sh
-curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.32/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
+curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.33/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
 
-echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.32/deb/ /' | sudo tee /etc/apt/sources.list.d/kubernetes.list
+echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.33/deb/ /' | sudo tee /etc/apt/sources.list.d/kubernetes.list
 
 apt-get update
 ```
@@ -26,7 +26,7 @@ apt-cache madison kubeadm
 ```
 #### Install and Upgrade Kubeadm
 ```sh
-apt-get install -y kubeadm="1.32.2-1.1*"
+apt-get install -y kubeadm="1.33.5-1.1*"
 kubeadm upgrade plan
 kubeadm upgrade apply v1.32.2
 ```
@@ -34,7 +34,7 @@ kubeadm upgrade apply v1.32.2
 ```sh
 apt-cache madison kubelet
 apt-cache madison kubectl
-apt-get install -y kubelet="1.32.2-1.1*" kubectl="1.32.2-1.1"
+apt-get install -y kubelet="1.33.5-1.1*" kubectl="1.33.5-1.1"
 
 systemctl daemon-reload
 systemctl restart kubelet
